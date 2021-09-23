@@ -23,6 +23,6 @@ class UserServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        dd("Hello");
+        $this->loadRoutesFrom(__DIR__ . '/../Routes/user_routes.php');
     }
 }
