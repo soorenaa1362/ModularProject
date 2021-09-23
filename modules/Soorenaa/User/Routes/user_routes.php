@@ -1,7 +1,7 @@
 <?php
 
 
-Route::group(['namespace' => 'App\Http\Controllers' , 
+Route::group(['namespace' => 'Soorenaa\User\Http\Controllers' , 
     'middleware' => 'web'], 
     function ($router) {
     Auth::routes(['verify' => true]);
