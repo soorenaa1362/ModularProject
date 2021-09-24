@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use Soorenaa\User\Rules\ValidMobile;
 use Soorenaa\User\Rules\ValidPassword;
-use App\User;
+use Soorenaa\User\Models\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
