@@ -4,8 +4,8 @@ namespace Soorenaa\User\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
-use App\Rules\ValidMobile;
-use App\Rules\ValidPassword;
+use Soorenaa\User\Rules\ValidMobile;
+use Soorenaa\User\Rules\ValidPassword;
 use App\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;

@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Rules;
+namespace Soorenaa\User\Rules;
 
 use Illuminate\Contracts\Validation\Rule;
 
-class ValidPassword implements Rule
+class ValidMobile implements Rule
 {
     /**
      * Create a new rule instance.
@@ -25,7 +25,7 @@ class ValidPassword implements Rule
      */
     public function passes($attribute, $value)
     {
-        return preg_match('/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{8,}$/', $value);
+        return preg_match('/^9[0-9]{9}/', $value);
     }
 
     /**
@@ -35,6 +35,6 @@ class ValidPassword implements Rule
      */
     public function message()
     {
-        return 'فرمت رمز عبور نا معتبر است .';
+        return 'فرمت موبایل نامعتبر است . شمار موبایل باید با ۹ شروع شده و بدون فاصله وارد شود .';
     }
 }
