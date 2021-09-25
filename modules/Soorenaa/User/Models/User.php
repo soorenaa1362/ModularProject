@@ -2,9 +2,10 @@
 
 namespace Soorenaa\User\Models;
 
+use Illuminate\Notifications\Notifiable;
+use Soorenaa\User\Notifications\VerifyMail;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use Illuminate\Notifications\Notifiable;
 
 class User extends Authenticatable implements MustVerifyEmail
 {
@@ -40,7 +41,7 @@ class User extends Authenticatable implements MustVerifyEmail
 
     public function sendEmailVerificationNotification()
     {
-        
+        $this->notify(new VerifyMail()) ;
     }
 
 }
