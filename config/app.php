@@ -161,7 +161,9 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
-        \Soorenaa\User\Providers\UserServiceProvider::class,
+        
+        Soorenaa\User\Providers\UserServiceProvider::class,
+        Soorenaa\Dashboard\Providers\DashboardServiceProvider::class,
 
         /*
          * Package Service Providers...
