@@ -38,7 +38,8 @@
         "psr-4": {
             "App\\": "app/",
             "Soorenaa\\User\\": "modules/Soorenaa/User/",
-            "Soorenaa\\Dashboard\\": "modules/Soorenaa/Dashboard/"
+            "Soorenaa\\Dashboard\\": "modules/Soorenaa/Dashboard/",
+            "Soorenaa\\Category\\": "modules/Soorenaa/Category/"
         },
         "classmap": [
             "database/seeds",

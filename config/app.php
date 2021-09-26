@@ -163,6 +163,7 @@ return [
         Illuminate\View\ViewServiceProvider::class,
         Soorenaa\User\Providers\UserServiceProvider::class,
         Soorenaa\Dashboard\Providers\DashboardServiceProvider::class,
+        Soorenaa\Category\Providers\CategoryServiceProvider::class,
 
         /*
          * Package Service Providers...
