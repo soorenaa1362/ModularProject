@@ -2,7 +2,6 @@
 
 namespace Soorenaa\Dashboard\Providers;
 
-use Soorenaa\User\Models\User;
 use Illuminate\Support\ServiceProvider;
 
 class DashboardServiceProvider extends ServiceProvider
