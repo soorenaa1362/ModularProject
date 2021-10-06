@@ -47,5 +47,13 @@ class CategoryController extends Controller
         return back();
     }
 
+
+    public function destroy(Category $category)
+    {
+        $category->delete();
+
+        return response()->json(['message' => 'عملیات حذف با موفقیت انجام شد .'], 200);
+    }
+
     
 }
