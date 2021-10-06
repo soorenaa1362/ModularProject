@@ -2,57 +2,53 @@
 
 namespace Soorenaa\Category\Http\Controllers;
 
-// use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use Soorenaa\Category\Models\Category;
+use Soorenaa\Category\Responses\AjaxResponses;
+use Soorenaa\Category\Repositories\CategoryRepo;
 use Soorenaa\Category\Http\Requests\CategoryRequest;
 
 class CategoryController extends Controller
 {
-    
+    public $repo;
+
+    public function __construct(CategoryRepo $categoryRepo)
+    {
+        $this->repo = $categoryRepo;
+    }
+
     public function index()
     {
-        $categories = Category::all();
+        $categories = $this->repo->all();
         return view('Categories::index' , compact('categories'));
     }
 
     
     public function store(CategoryRequest $request)
     {
-        Category::create([
-            'title' => $request->title,
-            'slug' => $request->slug,
-            'parent_id' => $request->parent_id,
-        ]);
-
+        $this->repo->store($request);
         return back();
     }
 
 
-    public function edit(Category $category)
+    public function edit($categoryId)
     {
-        $categories = Category::where('id' , '!=' , $category->id)->get();
+        $category = $this->repo->findById($categoryId);
+        $categories = $this->repo->allExceptById($categoryId);
         return view('Categories::edit' , compact('category' , 'categories'));
     }
 
 
-    public function update(Category $category , CategoryRequest $request)
-    {
-        $category->update([
-            'title' => $request->title,
-            'slug' => $request->slug,
-            'parent_id' => $request->parent_id,
-        ]);
-
+    public function update($categoryId , CategoryRequest $request)
+    {      
+        $this->repo->update($categoryId , $request);
         return back();
     }
 
 
-    public function destroy(Category $category)
+    public function destroy($categoryId)
     {
-        $category->delete();
-
-        return response()->json(['message' => 'عملیات حذف با موفقیت انجام شد .'], 200);
+        $this->repo->delete($categoryId);
+        return AjaxResponses::successResponse();
     }
 
     

@@ -19,7 +19,7 @@
                         </option>
                     @endforeach
                 </select>
-                <button class="btn btn-brand">ویرایش</button>
+                <button class="btn btn-brand">بروز رسانی</button>
             </form>
         </div>
     </div>
