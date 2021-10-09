@@ -4,6 +4,10 @@
     <link rel="stylesheet" href="/css/jquery.toast.min.css">
 @endsection
 
+@section('breadcrumb')
+    <li><a href="{{ route('categories.index') }}" title="دسته بندی ها">دسته بندی ها</a></li>
+@endsection
+
 @section('content')
     <div class="row no-gutters  ">
         <div class="col-8 margin-left-10 margin-bottom-15 border-radius-3">
