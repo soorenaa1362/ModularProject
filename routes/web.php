@@ -17,6 +17,12 @@ Route::get('/', function () {
 });
 
 
+Route::get('/test', function () {
+    auth()->user()->givePermissionTo('manage categories');
+    // return auth()->user()->permissions;
+});
+
+
 
 
 
