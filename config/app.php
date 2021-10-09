@@ -179,7 +179,7 @@ return [
         Soorenaa\User\Providers\UserServiceProvider::class,
         Soorenaa\Dashboard\Providers\DashboardServiceProvider::class,
         Soorenaa\Category\Providers\CategoryServiceProvider::class,
-
+        Soorenaa\RolePermissions\Providers\RolePermissionsServiceProvider::class,
     ],
 
     /*

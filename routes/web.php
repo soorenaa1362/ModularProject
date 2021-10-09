@@ -18,8 +18,9 @@ Route::get('/', function () {
 
 
 Route::get('/test', function () {
-    auth()->user()->givePermissionTo('manage categories');
-    // return auth()->user()->permissions;
+    \Spatie\Permission\Models\Permission::create(['name' => 'manage role_permissions']);
+    auth()->user()->givePermissionTo('manage role_permissions');
+    return auth()->user()->permissions;
 });
 
 
