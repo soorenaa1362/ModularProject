@@ -161,9 +161,7 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
-        Soorenaa\User\Providers\UserServiceProvider::class,
-        Soorenaa\Dashboard\Providers\DashboardServiceProvider::class,
-        Soorenaa\Category\Providers\CategoryServiceProvider::class,
+        
 
         /*
          * Package Service Providers...
@@ -177,6 +175,10 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+
+        Soorenaa\User\Providers\UserServiceProvider::class,
+        Soorenaa\Dashboard\Providers\DashboardServiceProvider::class,
+        Soorenaa\Category\Providers\CategoryServiceProvider::class,
 
     ],
 
