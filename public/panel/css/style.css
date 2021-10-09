@@ -1459,7 +1459,7 @@ span.tagRemove:hover {
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
-    user-select: none;
+    user-select: none;  
 }
 
 .ui-checkbox input {
@@ -1923,4 +1923,9 @@ span.tagRemove:hover {
 
 .notification__box .title__noti {
     padding: 15px 0;
+}
+
+
+.invalid-feedback{
+    color: red;
 }
