@@ -13,7 +13,7 @@
     @foreach ($permissions as $permission)
         <label class="ui-checkbox">
             <input type="checkbox" name="permissions[{{ $permission->name }}]" class="sub-checkbox" 
-                data-id="1" value="true"
+                data-id="1" value="{{ $permission->name }}"
                 @if ( is_array(old('permissions')) && array_key_exists($permission->name, old('permissions')) )
                     checked
                 @endif
