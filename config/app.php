@@ -180,6 +180,7 @@ return [
         Soorenaa\Dashboard\Providers\DashboardServiceProvider::class,
         Soorenaa\Category\Providers\CategoryServiceProvider::class,
         Soorenaa\RolePermissions\Providers\RolePermissionsServiceProvider::class,
+        Soorenaa\Course\Providers\CourseServiceProvider::class,
     ],
 
     /*

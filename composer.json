@@ -41,7 +41,8 @@
             "Soorenaa\\User\\": "modules/Soorenaa/User/",
             "Soorenaa\\Dashboard\\": "modules/Soorenaa/Dashboard/",
             "Soorenaa\\Category\\": "modules/Soorenaa/Category/",
-            "Soorenaa\\RolePermissions\\": "modules/Soorenaa/RolePermissions/"
+            "Soorenaa\\RolePermissions\\": "modules/Soorenaa/RolePermissions/",
+            "Soorenaa\\Course\\": "modules/Soorenaa/Course/"
         },
         "classmap": [
             "database/seeds",
