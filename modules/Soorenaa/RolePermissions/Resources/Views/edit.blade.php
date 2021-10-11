@@ -23,7 +23,7 @@
                 
                 <p class="box__title margin-bottom-15">انتخاب مجوزها</p>
                 @foreach ($permissions as $permission)
-                    <label class="ui-checkbox">
+                    <label class="ui-checkbox" style="margin-top: 5px;">
                         <input type="checkbox" name="permissions[{{ $permission->name }}]" class="sub-checkbox" 
                             data-id="1" value="{{ $permission->name }}"
                             @if ($role->hasPermissionTo($permission->name))

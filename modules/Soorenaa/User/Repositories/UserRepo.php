@@ -2,14 +2,14 @@
 
 namespace Soorenaa\User\Repositories;
 
-use Soorenaa\Category\Models\User;
+use Soorenaa\User\Models\User;
 
 class UserRepo
 {
     
     public function getTeachers()
     {
-        return [];
+        return User::permission('teach')->get();
     }
 
 }

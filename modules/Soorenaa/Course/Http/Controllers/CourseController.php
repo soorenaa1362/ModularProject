@@ -3,6 +3,8 @@
 namespace Soorenaa\Course\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use Soorenaa\User\Repositories\UserRepo;
+use Soorenaa\Category\Repositories\CategoryRepo;
 
 class CourseController extends Controller
 {
@@ -11,9 +13,10 @@ class CourseController extends Controller
         return 'course';
     }
 
-    public function create(UserRepo $userRepo)
+    public function create(UserRepo $userRepo , CategoryRepo $categoryRepo)
     {
         $teachers = $userRepo->getTeachers();
-        return view('Courses::create' , compact('teachers'));
+        $categories = $categoryRepo->all();
+        return view('Courses::create' , compact('teachers' , 'categories'));
     }
 }
