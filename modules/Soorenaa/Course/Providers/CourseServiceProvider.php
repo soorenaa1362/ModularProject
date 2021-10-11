@@ -3,6 +3,7 @@
 namespace Soorenaa\Course\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use Soorenaa\Course\Database\Seeds\RolePermissionTableSeeder;
 
 class CourseServiceProvider extends ServiceProvider
 {
@@ -11,6 +12,7 @@ class CourseServiceProvider extends ServiceProvider
         $this->loadRoutesFrom(__DIR__ . '/../Routes/courses_routes.php');
         $this->loadViewsFrom(__DIR__ . '/../Resources/Views', 'Courses');
         $this->loadMigrationsFrom(__DIR__ . '/../Database/Migrations');
+        \DatabaseSeeder::$seeders[] = RolePermissionTableSeeder::class;
     }
 
 
